@@ -1,0 +1,59 @@
+##To switch between the cloud and multinode deployment 
+##replace this file whith one of the files located in the 
+##taf_properties_tmp folder
+#
+##This parameter is used by TafHosts class to determine the deployment type
+##multinode or cloud
+##deployment.type=multinode
+##
+##host.dhcpai.ip=192.168.80.10
+##
+##host.dhcpai.type=jboss
+##host.dhcpai.port.http=8080
+##host.dhcpai.port.rmi=4447
+##
+
+host.dhcpai.ip=192.168.80.10
+
+host.dhcpai.type=jboss
+host.dhcpai.port.http=8080
+host.dhcpai.port.rmi=4447
+
+host.dhcpai.user.root.pass=Dhcpai#2
+
+deployment.type=multinode
+
+host.sc1.type=SC1
+host.sc1.ip=192.168.80.10
+host.sc1.port.http=8080
+host.sc1.port.rmi=4447
+host.sc1.port.ssh=22
+host.sc1.user.root.type = ADMIN
+host.sc1.user.root.pass=Dhcpai#2
+
+#host.msc1jbi.tunnel = 1
+host.sc1jbi.type = jboss
+host.sc1jbi.ip = 192.168.80.10
+host.sc1jbi.port.http = 8080
+host.sc1jbi.port.rmi = 4447
+host.sc1jbi.port.jmx = 9999
+host.sc1jbi.port.jms = 9999
+host.sc1jbi.user.guest.pass=guestp
+host.sc1jbi.user.guest.type=OPER 
+
+host.msc2.type=SC2
+host.msc2.ip=192.168.80.10
+host.msc2.port.http=8080
+host.msc2.port.rmi=4447
+host.msc2.port.ssh=22
+host.msc2.user.root.type = ADMIN
+host.msc2.user.root.pass=litpc0b6lEr
+
+#host.msc2jbi.tunnel = 2
+host.sc2jbi.type = jboss
+host.sc2jbi.ip = 192.168.80.10
+host.sc2jbi.port.http = 8080
+host.sc2jbi.port.rmi = 4447
+host.sc2jbi.port.jmx = 9999
+host.sc2jbi.user.guest.pass=guestp
+host.sc2jbi.user.guest.type=OPER

@@ -1,0 +1,5 @@
+hostName,summaryFileLocation,smrsServer,primaryNtpTimeServer,secondaryNtpTimeServer,clientType,coordinateUniversalTimeOffsetInSeconds,ipAddress_add,clientIdentifier_add,ipAddress_exists,clientIdentifier_exists,expected_add,expected_exists
+site1eRBS15,/LRAN/smrsslave1/AIF/Site1eRBS15/summaryFile.xml,10.0.2.111,10.42.52.99,10.42.52.100,LTE,23005253,10.32.226.2,eRBS15_SITE2,10.32.226.2,eRBS15_SITE2,SUCCESS,EXISTS
+site1eRBS15,/LRAN/smrsslave1/AIF/Site1eRBS15/summaryFile.xml,10.0.2.111,10.42.52.99,10.42.52.100,LTE,23005253,10.32.226.2,eRBS15_SITE2,,eRBS15_SITE2,SUCCESS,EXISTS
+site1eRBS15,/LRAN/smrsslave1/AIF/Site1eRBS15/summaryFile.xml,10.0.2.111,10.42.52.99,10.42.52.100,LTE,23005253,10.32.226.2,eRBS15_SITE2,10.32.226.2,,SUCCESS,EXISTS
+site1eRBS15,/LRAN/smrsslave1/AIF/Site1eRBS15/summaryFile.xml,10.0.2.111,10.42.52.99,10.42.52.100,LTE,23005253,10.32.226.2,eRBS15_SITE2,,,SUCCESS,DHCPAI_VALIDATION_EXCEPTION

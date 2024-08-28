@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Master Suite" parallel="false" preserve-order="true">
+
+	<test name="E2eAndFunctionalTest">
+
+		<classes>
+			<class name="com.ericsson.nms.security.dhcpai.test.cases.network.NetworkServiceFunctionalTest"/>
+			<class name="com.ericsson.nms.security.dhcpai.test.cases.ip.IpAddressServiceFunctionalTest"/> 
+			<class name="com.ericsson.nms.security.dhcpai.test.cases.range.NetworkRangeServiceFunctionalTest"/>
+			<class name="com.ericsson.nms.security.dhcpai.test.cases.client.ClientServiceFunctionalTest" />
+		
+			<!-- NEED DHCP ON THE SERVER  <class name="com.ericsson.nms.security.dhcpai.test.cases.range.NetworkRangeServiceE2ETest" /> -->
+			<!-- NEED DHCP ON THE SERVER <class name="com.ericsson.nms.security.dhcpai.test.cases.network.NetworkServiceE2ETest" />-->
+			<!-- NEED DHCP ON THE SERVER <class name="com.ericsson.nms.security.dhcpai.test.cases.client.ClientServiceE2ETest" 	/> -->
+			</classes>
+
+	</test>
+	<test name="ListTests">
+		<classes>
+	 	    <class name="com.ericsson.nms.security.dhcpai.test.cases.network.NetworkServiceListFunctionalTest"/> 
+			<class name="com.ericsson.nms.security.dhcpai.test.cases.client.ClientServiceListFunctionalTest"/> 
+		</classes>
+	</test>
+
+	<test name="LoadTests">
+		<classes>
+			<!-- <class name="com.ericsson.nms.security.dhcpai.test.cases.client.ClientServiceLoadTest" 
+				/> -->
+			<!-- <class name="com.ericsson.nms.security.dhcpai.test.cases.range.NetworkRangeServiceLoadTest" 
+				/> -->
+			<!-- <class name="com.ericsson.nms.security.dhcpai.test.cases.network.NetworkServiceLoadTest" 
+				/> -->
+			<!-- <class name="com.ericsson.nms.security.dhcpai.test.cases.ip.IpAddressServiceLoadTest" 
+				/> -->
+		</classes>
+	</test>
+</suite>
+ 
+ 

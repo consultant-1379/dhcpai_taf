@@ -1,0 +1,50 @@
+/.settings
+/.project
+/.classpath
+/target
+.pmd
+dhcpai-api/bin/
+dhcpai-ejb/bin/
+dhcpai-jar/bin/
+dhcpai-war/bin/
+testsuite/benchmark/bin/
+testsuite/integration/jee-cluster/bin/
+testsuite/integration/jee/bin
+testsuite/integration/standalone/bin
+testsuite/integration/standalone-cluster/bin
+testsuite/integration/bin
+testsuite/stress/bin/
+
+<<<<<<< HEAD
+tmp/**
+test-pom/target/**
+dhcpai-taf-testcase/target/**
+=======
+/tmp
+/test-output
+>>>>>>> 8d27f568579d259b873ab5762a9924f712fa17b6
+
+# Compiled source #
+*.class
+*/bin/*
+
+# Eclipse files
+.project
+.classpath
+.settings
+.metadata
+
+# Packages
+*.jar
+
+# Maven build files
+target
+reports
+# ARQ tests
+arq-perf
+
+# Merge files
+*.orig
+
+# backup files
+*.*~

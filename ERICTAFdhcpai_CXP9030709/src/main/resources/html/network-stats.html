@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="lib/style.css">
+<script language="javascript" type="text/javascript" src="lib/jquery.js"></script>
+<script language="javascript" type="text/javascript"
+	src="lib/jquery.flot.js"></script>
+<script language="javascript" type="text/javascript"
+	src="lib/jquery.flot.axislabels.js"></script>
+<script language="javascript" type="text/javascript"
+	src="lib/plot-graph.js"></script>
+</head>
+<body>
+
+	<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+		   $.getJSON('data/Network-stats.json', function(json) {
+       
+		   var testTime = json.testDuration; 
+		   document.getElementById("testDuration").innerHTML=testTime
+		   
+		   //add data
+		   plotData(json.addStats,"#addDiv",'addOpCount','avgAddOpCallTime')
+          		
+		   //delete data
+		   plotData(json.deleteStats,"#deleteDiv",'deleteOpCount','avgDeleteOpCallTime')
+           
+		   //find data
+		   plotData(json.findStats,"#findDiv",'findOpCount','avgFindOpCallTime')
+           
+		   //exist data
+		   plotData(json.existStats,"#existDiv",'existOpCount','avgExistOpCallTime')		
+    });
+});
+</script>
+
+	<div>
+		Duration of test: <span id="testDuration"></span> seconds.
+	</div>
+
+	<div style="text-align: center;">
+		<br />
+		<h3>
+			Add <span class="elementType"></span><span
+				style="font-weight: normal; font-size: 15px;">(Starting with
+				zero networks in the conf file)</span>
+		</h3>
+		<p>
+			Call count:&nbsp;<span id="addOpCount"></span><br /> Average
+			operation time:&nbsp;<span id="avgAddOpCallTime"></span>s<br />
+		</p>
+		<div id="addDiv" style="display: block; height: 300px"></div>
+	</div>
+
+	<div style="text-align: center;">
+		<br>
+		<h3>
+			Delete <span class="elementType"></span><span
+				style="font-weight: normal; font-size: 15px;">(Starting with
+				5,000 networks in the conf file)</span>
+		</h3>
+		<p>
+			Call count:&nbsp;<span id="deleteOpCount"></span><br /> Average
+			operation time:&nbsp;<span id="avgDeleteOpCallTime"></span>s<br />
+		</p>
+		<div id="deleteDiv" style="display: block; height: 300px"></div>
+	</div>
+
+	<div style="text-align: center;">
+		<br>
+		<h3>
+			Find <span class="elementType"></span><span
+				style="font-weight: normal; font-size: 15px;">(5,000 networks
+				in the conf file)</span>
+		</h3>
+		<p>
+			Call count:&nbsp;<span id="findOpCount"></span><br /> Average call
+			time:&nbsp;<span id="avgFindOpCallTime"></span>s<br />
+		</p>
+		<div id="findDiv" style="display: block; height: 300px"></div>
+	</div>
+
+	<div style="text-align: center;">
+		<br>
+		<h3>
+			<span class="elementType"></span> Exists <span
+				style="font-weight: normal; font-size: 15px;">(5,000 networks
+				in the conf file)</span>
+		</h3>
+		<p>
+			Call count:&nbsp;<span id="existOpCount"></span><br /> Average call
+			time:&nbsp;<span id="avgExistOpCallTime"></span>s<br />
+		</p>
+		<div id="existDiv" style="display: block; height: 300px"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+networkSubnet,networkNetmask,networkDnsServers,networkDnsDomainName,networkDefaultRouter,networkExpectedAddResult,netmask,defaultRouter,startIp,endIp,leaseTime,smrsServer,primaryNtpTimeServer,secondaryNtpTimeServer,primaryWebServer,secondaryWebServer,expectedAddResult,expectedExistsResultAfterAdd,expectedDeleteResult,expectedExistsResultAfterDelete
+10.32.226.0,255.255.255.0,192.168.2.2,my.domain.com,10.32.226.1,SUCCESS,255.255.255.0,10.32.226.1,10.32.226.10,10.32.226.20,2500,10.0.2.111,10.42.52.99,10.42.52.100,10.42.52.99,10.42.52.100,SUCCESS,EXISTS,SUCCESS,DOES_NOT_EXIST

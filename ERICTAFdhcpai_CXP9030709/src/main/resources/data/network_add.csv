@@ -1,0 +1,12 @@
+uuid,subnet,netmask,dnsServers,dnsDomainName,defaultRouter,expectedResultType,expectedResultMessage
+0a29c4f0-67e8-11e3-949a-0800200c9a66,10.32.224.0,255.255.255.0,10.32.224.2,my.domain.com,10.32.1.1,SUCCESS,0a29c4f0-67e8-11e3-949a-0800200c9a66
+1a29c4f0-67e8-11e3-949a-0800200c9a66,10.32.224.0,255.255.255.0,10.32.224.2|10.32.224.3,my.domain.com,10.32.80.1,SUCCESS,1a29c4f0-67e8-11e3-949a-0800200c9a66
+2a29c4f0-67e8-11e3-949a-0800200c9a66,,255.255.255.0,192.168.2.2,my.domain.com,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option subnet is invalid: null
+3a29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,,192.168.2.2,my.domain.com,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option netmask is invalid: null
+4a29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,255.255.255.0,,my.domain.com,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option DNS server(s) is null or is empty
+5a29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,255.255.255.0,192.168.2.2,,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option domain name is empty
+6a29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,255.255.255.0,192.168.2.2,my.domain.com,,DHCPAI_VALIDATION_EXCEPTION,Required option default router is invalid: null
+7a29c4f0-67e8-11e3-949a-0800200c9a66,300.300.300.300,255.255.255.0,192.168.2.2,my.domain.com,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option subnet is invalid: 300.300.300.300
+8a29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,255.255.255,192.168.2.2,my.domain.com,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option netmask is invalid: 255.255.255
+9a29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,255.255.255.0,122.123.123.1a3,my.domain.com,192.168.3.1,DHCPAI_VALIDATION_EXCEPTION,Required option dnsServer is invalid: 122.123.123.1a3
+0b29c4f0-67e8-11e3-949a-0800200c9a66,192.168.3.0,255.255.255.0,192.168.2.2,my.domain.com,"123,123.123.123",DHCPAI_VALIDATION_EXCEPTION,"Required option default router is invalid: 123,123.123.123"

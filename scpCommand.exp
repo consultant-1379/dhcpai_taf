@@ -1,0 +1,37 @@
+#!/usr/bin/env expect
+# helge wehder 2014
+
+set ME "scpCommand.exp"
+
+if { $argc < 4 } { 
+    send_user "error missing arguments usage:\n" 
+    send_user "$ME \<user@hostname\> \<password> \<file\> \<port\> \<targetFolder\>\n"
+    exit 1 
+}
+set TERM "xterm"
+set password [ lindex $argv 1 ]
+set file [ lindex $argv 2 ]
+if { $argc < 3 } { 
+    set port "22" 
+} else { 
+    set port [ lindex $argv 3 ] 
+}
+
+
+    set folder [ lindex $argv 4 ] 
+
+
+set userAtHost [ lindex $argv 0 ]
+set timeout -1
+
+match_max 100000
+
+spawn scp -P $port $file $userAtHost:$folder
+expect {
+-exact "Are you sure you want to continue connecting (yes/no)? " {send -- "yes\r" ; exp_continue}
+-exact "password: " {send -- "$password\r";exp_continue}
+-exact "Permission denied, please try again." {exit 5}
+-exact "Host key verification failed." {exit 1}
+#-exact "$file" {exit 0}
+eof {exit 0}
+}

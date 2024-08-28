@@ -1,0 +1,10 @@
+#tooltip {
+	position: absolute;
+	border: 1px solid rgb(255, 221, 221);
+	padding: 2px;
+	background-color: rgb(255, 238, 238);
+	opacity: 0.8;
+	top: 170px;
+	left: 692px;
+	display: block;
+}

@@ -1,0 +1,59 @@
+#To switch between the cloud and multinode deployment 
+#replace this file whith one of the files located in the 
+#taf_properties_tmp folder
+
+#This parameter is used by TafHosts class to determine the deployment type
+deployment.type=cloud
+
+#dhcpai
+host.dhcpai.ip = 10.45.200.156 
+
+host.dhcpai.user.root.pass = shroot
+host.dhcpai.user.root.type = ADMIN
+host.dhcpai.port.ssh=22
+
+#tunnelling to sc1 which is behind the dhcpai
+host.dhcpai.node.sc1.tunnel = 1
+host.dhcpai.node.sc1.type = SC1
+host.dhcpai.node.sc1.ip = 192.168.0.43
+host.dhcpai.node.sc1.port.ssh=22
+host.dhcpai.node.sc1.port.http = 8080
+host.dhcpai.node.sc1.port.jmx = 9999
+host.dhcpai.node.sc1.port.rmi=4447
+host.dhcpai.node.sc1.user.root.pass=litpc0b6lEr
+host.dhcpai.node.sc1.user.root.type=ADMIN
+
+#tunnelling to sc1jbossinstance which is behind the dhcpai
+host.dhcpai.node.sc1jbi.tunnel = 2
+host.dhcpai.node.sc1jbi.type = jboss
+host.dhcpai.node.sc1jbi.ip = 192.168.0.70
+host.dhcpai.node.sc1jbi.port.ssh=22
+host.dhcpai.node.sc1jbi.port.http = 8080
+host.dhcpai.node.sc1jbi.port.rmi = 4447
+host.dhcpai.node.sc1jbi.port.jmx = 9999
+host.dhcpai.node.sc1jbi.port.jms = 4447
+host.dhcpai.node.sc1jbi.user.guest.pass=guestp
+host.dhcpai.node.sc1jbi.user.guest.type=OPER 
+
+#tunnelling to sc2 which is behind the dhcpai
+host.dhcpai.node.sc2.tunnel = 3
+host.dhcpai.node.sc2.type = SC2
+host.dhcpai.node.sc2.ip = 192.168.0.44
+host.dhcpai.node.sc2.port.ssh=22
+host.dhcpai.node.sc2.port.http = 8080
+host.dhcpai.node.sc2.port.jmx = 9999
+host.dhcpai.node.sc2.port.jms=9999
+host.dhcpai.node.sc2.user.root.pass=litpc0b6lEr
+host.dhcpai.node.sc2.user.root.type=ADMIN
+
+#tunnelling to sc2jbossinstance which is behind the dhcpai
+host.dhcpai.node.sc2jbi.tunnel = 4
+host.dhcpai.node.sc2jbi.type = jboss
+host.dhcpai.node.sc2jbi.ip = 192.168.0.71
+host.dhcpai.node.sc2jbi.port.ssh=22
+host.dhcpai.node.sc2jbi.port.http = 8080
+host.dhcpai.node.sc2jbi.port.rmi = 4447
+host.dhcpai.node.sc2jbi.port.jmx = 9999
+host.dhcpai.node.sc2jbi.port.jms = 4447
+host.dhcpai.node.sc2jbi.user.guest.pass=guestp
+host.dhcpai.node.sc2jbi.user.guest.type=OPER 

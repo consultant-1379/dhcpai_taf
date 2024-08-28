@@ -1,0 +1,3 @@
+clientType,clientIdentifier,expected
+LTE,eRBS15_SITE1,SUCCESS
+LTE,,DHCPAI_VALIDATION_EXCEPTION

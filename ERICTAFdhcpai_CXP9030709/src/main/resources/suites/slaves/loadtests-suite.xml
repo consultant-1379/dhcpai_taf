@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="LoadTestSuite" parallel="tests" thread-count="20">
+
+	<parameter name="taf.vusers" value="20" />
+	<parameter name="taf.start-delay" value="1" />
+	<parameter name="taf.repeat-count" value="10" />
+	<!-- parameter name="taf.repeat-until" value="1000"/> -->
+	<parameter name="taf.think-time" value="1" />
+
+	<test name="NetworkLoadTest" preserve-order="true">
+
+		<classes>
+			<!-- <class name="com.ericsson.nms.security.dhcpai.test.cases.NetworkServiceLoadTest"/> -->
+		</classes>
+	</test>
+
+</suite>

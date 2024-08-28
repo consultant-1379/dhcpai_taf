@@ -1,0 +1,4 @@
+uuid,subnet,netmask,expectedResultType,expectedResultMessage
+1b29c4f0-67e8-11e3-949a-0800200c9a66,10.32.226.0,255.255.255.0,SUCCESS,1b29c4f0-67e8-11e3-949a-0800200c9a66
+2b29c4f0-67e8-11e3-949a-0800200c9a66,592.168.1.0,,DHCPAI_VALIDATION_EXCEPTION,Required option subnet is invalid: 592.168.1.0
+3b29c4f0-67e8-11e3-949a-0800200c9a66,,,DHCPAI_VALIDATION_EXCEPTION,Required option subnet is invalid: null

@@ -1,0 +1,2 @@
+subnet,netmask,dnsServers,dnsDomainName,defaultRouter,expected
+10.32.224.0,255.255.252.0,10.32.224.2,my.domain.com,10.32.224.1,EXISTS
